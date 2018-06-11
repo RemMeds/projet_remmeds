@@ -1,10 +1,11 @@
 language: android
 sudo: false
-addons:
-  sonarcloud:
-    organization: "remmeds"
-    token:
-      secure: "gd70421C5sJ61PYXMJdvREsSqqBaL5FXR4yEXE/HvIzRtr8YlfNY71onC8rcU4VmmSKn8Bn/U4ZbVR4abdsgdkizDEAy9USGJdBlyJ0tfZ1P78OzI8Ja7eG55bgAAIaIvSFrLxUAt3cEVxq5ElE9f6aqVO2cpM/ejLH4GHXAaEB64OUX1hUFgcMqymTL6IY1DX6nf+SVV2W928yqf2Neil4F7D4kz1uQu+pl9xo0/oSPceetVCduIx2iKqoE8z3nieJCYN+AhXLA3Wg8XnoJNWL4bJr2NZMHzgZxynjX5wx5t02hqOfn1vQdNFQhrnSrVk06Zp4LbDi/qoYUvaC6fmt/vCk8D63sRPkqxabgjlYVRmpyq5rAXClaRDJydBQv3yqc/Zgitpcn1IZr6r+PksowQvtCmPCaZfzYrNgCOdhPU7ZzkQbGiuDhTYw3+yu8AZXwysCIJ10XD3Uu8O8x7X80jT5IZT6A5+qMUAdX/LAJTx4AtDs+Z0gHDVu5/Iwr+JcfvBPdhWuWFNmMBpU5XNDDfTg/gr5I0zegML/nXspNaPaGFzM/Kq2UxF7zY8y8LC/2s/lEjbJCyWvuqusGifUQxDYOe+3r+OYKVCO1x2MUGvkEAJIoARLbNaegorMyo9dYkuojR5NTUbALxJjxRZajg9V2Coa9PNarbbLavhY="
+#jdk: oraclejdk8
+#addons:
+#  sonarcloud:
+#    organization: "remmeds"
+#    token:
+#      secure: "gd70421C5sJ61PYXMJdvREsSqqBaL5FXR4yEXE/HvIzRtr8YlfNY71onC8rcU4VmmSKn8Bn/U4ZbVR4abdsgdkizDEAy9USGJdBlyJ0tfZ1P78OzI8Ja7eG55bgAAIaIvSFrLxUAt3cEVxq5ElE9f6aqVO2cpM/ejLH4GHXAaEB64OUX1hUFgcMqymTL6IY1DX6nf+SVV2W928yqf2Neil4F7D4kz1uQu+pl9xo0/oSPceetVCduIx2iKqoE8z3nieJCYN+AhXLA3Wg8XnoJNWL4bJr2NZMHzgZxynjX5wx5t02hqOfn1vQdNFQhrnSrVk06Zp4LbDi/qoYUvaC6fmt/vCk8D63sRPkqxabgjlYVRmpyq5rAXClaRDJydBQv3yqc/Zgitpcn1IZr6r+PksowQvtCmPCaZfzYrNgCOdhPU7ZzkQbGiuDhTYw3+yu8AZXwysCIJ10XD3Uu8O8x7X80jT5IZT6A5+qMUAdX/LAJTx4AtDs+Z0gHDVu5/Iwr+JcfvBPdhWuWFNmMBpU5XNDDfTg/gr5I0zegML/nXspNaPaGFzM/Kq2UxF7zY8y8LC/2s/lEjbJCyWvuqusGifUQxDYOe+3r+OYKVCO1x2MUGvkEAJIoARLbNaegorMyo9dYkuojR5NTUbALxJjxRZajg9V2Coa9PNarbbLavhY="
 android:
   components:
   - build-tools-27.0.3
@@ -13,7 +14,11 @@ android:
 script:
 - "./gradlew test"
 - "./gradlew lint"
-- "./gradlew sonarqube"
+- "./gradlew sonarqube \
+       -Dsonar.host.url=https://sonarcloud.io \
+       -Dsonar.organization=remmeds \
+       -Dsonar.login=71a0474c2d6a00ad268e14a1419ffd5ea04f720b"
+
 before_install:
 - chmod +x gradlew
 cache:

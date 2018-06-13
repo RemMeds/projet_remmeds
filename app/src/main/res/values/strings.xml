@@ -5,48 +5,5 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">A propos</string>
-
-    <!-- HOME -->
-    <string name="titre_home">RemMeds, reprenez le contrôle</string>
-    <!-- Texte fixe prises du jour -->
-    <!-- Ligne 1 -->
-    <string name="medic1">Nom du médicament</string>
-    <string name="details1">Heure : 20:00\n2 cachets à diluer</string>
-    <!-- Ligne 2 -->
-    <string name="medic2">Nom du médicament 2</string>
-    <string name="details2">Heure : 21:00\n3 cuilières à soupe</string>
-    <!-- Ligne 3 -->
-    <string name="medic3">Nom du médicament 3</string>
-    <string name="details3">Heure : 21:00\n1 cachet à avaler</string>
-    <!-- Ligne 4 -->
-    <string name="medic4">Nom du médicament 4</string>
-    <string name="details4">Heure : 21:00\n1 sachet à diluer</string>
-
-    <!-- SECTIONS -->
-    <string name="titre_sections">Un compartiment, un médicament et vous n\'aurez plus à vous en soucier !</string>
-    <string name="compartiment">Bouton compartiment pilulier</string>
-    <!-- SECTIONS - CONFIG -->
-    <string name="medic_name">Nom du médicament</string>
-    <string name="duree">Durée du traitement</string>
-    <string name="conditions">Conditions de prises</string>
-    <string name="petit_dej">Petit-déjeuner</string>
-    <string name="dejeuner">Déjeuner</string>
-    <string name="diner">Dîner</string>
-    <string name="coucher">Au coucher</string>
-    <string name="heure_perso">Heure personnalisée</string>
-    <string name="hint_apartirde">A partir de</string>
-    <string name="freq_heure_perso">Toutes les</string>
-    <string name="freq_heure_perso_end">heure(s), à partir de</string>
-    <string name="freq_perso">Fréquence personnalisée</string>
-    <string name="lundi">L</string>
-    <string name="marmer">M</string>
-    <string name="jeudi">J</string>
-    <string name="vendredi">V</string>
-    <string name="samedi">S</string>
-    <string name="dimanche">D</string>
-    <string name="notes">Notes</string>
-
-    <string name="button_save">Enregistrer</string>
-    <string name="button_cancel">Annuler</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -14,13 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+public class Repertoire extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_repertoire);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.repertoire, menu);
         return true;
     }
 
@@ -73,21 +73,24 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.historique) {
-            Intent i = new Intent(MainActivity.this, Historique.class);
+            Intent i = new Intent(Repertoire.this, Historique.class);
             startActivity(i);
         } else if (id == R.id.repertoire) {
-            Intent i = new Intent(MainActivity.this, Repertoire.class);
+            Intent i = new Intent(Repertoire.this, Repertoire.class);
             startActivity(i);
         } else if (id == R.id.accueil) {
-            Intent i = new Intent(MainActivity.this, MainActivity.class);
-            startActivity(i);
+        Intent i = new Intent(Repertoire.this, MainActivity.class);
+        startActivity(i);
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-
+    public void sendMessage(View view)
+    {
+        Intent intent = new Intent(Repertoire.this, AjoutContact.class);
+        startActivity(intent);
+    }
 }

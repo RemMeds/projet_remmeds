@@ -16,7 +16,6 @@
             android:id="@+id/repertoire"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Repertoire" />
-
     </group>
 
 </menu>

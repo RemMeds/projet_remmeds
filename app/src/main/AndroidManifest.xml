@@ -19,21 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Historique"
-            android:label="@string/title_activity_historique"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Repertoire"
-            android:label="@string/title_activity_repertoire"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AjoutContact" />
-        <activity
-            android:name=".Profil"
-            android:label="@string/title_activity_profil"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Configuration" />
-        <activity android:name=".Authentification"></activity>
     </application>
 
 </manifest>
